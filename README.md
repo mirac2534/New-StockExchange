@@ -1,4 +1,4 @@
-# Stock Exchange project
+# Stock Exchange Project
 The aim of this project is to make people follow their own portfolios easily. Creates individual passbooks for each created profile and categorizes them.
 ## 1- StockExchange Class
 
