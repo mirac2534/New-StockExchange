@@ -79,9 +79,9 @@ Handles the purchase of precious metals (e.g., gold) for the user and delegates 
 private static void buyCurrency(InvestorProfile.Profile currentProfile, Scanner scanner)  
 Handles the purchase of currency for the user and delegates the process to the buyAssetHelper method.
 
-### 3-5- buyAssetHelper Method
+### 3-5- buyAsset Method
 
-private static void buyAssetHelper(String filePath, String transactionFile, String assetType, Scanner scanner, InvestorProfile.Profile currentProfile)  
+private static void buyAsset(String filePath, String transactionFile, String assetType, Scanner scanner, InvestorProfile.Profile currentProfile)  
 Prompts the user for asset details (name, price, quantity, and date), updates or adds the asset to the user's portfolio file, and logs the transaction.
 
 ### 3-6- logTransaction Method
@@ -111,9 +111,9 @@ Handles the sale of precious metals (e.g., gold) for the user and delegates the 
 private static void sellCurrency(InvestorProfile.Profile currentProfile, Scanner scanner)  
 Handles the sale of currency for the user and delegates the process to the sellAssetHelper method.
 
-### 4-5- sellAssetHelper Method
+### 4-5- sellAsset Method
 
-private static void sellAssetHelper(String filePath, String transactionFile, String assetType, Scanner scanner, InvestorProfile.Profile currentProfile)  
+private static void sellAsset(String filePath, String transactionFile, String assetType, Scanner scanner, InvestorProfile.Profile currentProfile)  
 Handles the sale process by updating or removing assets from the user's portfolio based on the specified details.
 
 ### 4-6- logTransaction Method
