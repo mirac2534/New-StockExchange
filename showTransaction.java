@@ -32,23 +32,24 @@ public class showTransaction {
 
     // To view transactions grouped by asset type and action
     private static void displayGroupedTransactions(String assetType, Map<String, List<String[]>> buyTransactions, Map<String, List<String[]>> sellTransactions) {
-        System.out.println("\n" + assetType + ":");
+        boolean hasTransactions = false;
 
-        // Display Buy Transactions
-        System.out.println("  Buy:");
-        if (buyTransactions.isEmpty()) {
-            System.out.println("    No buy transactions found.");
-        } else {
+        // Check if there are any Buy Transactions
+        if (!buyTransactions.isEmpty()) {
+            hasTransactions = true;
+            System.out.println("\n" + assetType + ":");
+            System.out.println("  Buy:");
             for (String[] transaction : buyTransactions.values().stream().flatMap(List::stream).toList()) {
                 displayTransactionDetails(transaction);
             }
         }
 
-        // Display Sell Transactions
-        System.out.println("  Sell:");
-        if (sellTransactions.isEmpty()) {
-            System.out.println("    No sell transactions found.");
-        } else {
+        // Check if there are any Sell Transactions
+        if (!sellTransactions.isEmpty()) {
+            if (!hasTransactions) {
+                System.out.println("\n" + assetType + ":"); // Print asset type header only once
+            }
+            System.out.println("  Sell:");
             for (String[] transaction : sellTransactions.values().stream().flatMap(List::stream).toList()) {
                 displayTransactionDetails(transaction);
             }
