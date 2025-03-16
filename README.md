@@ -29,7 +29,7 @@ The constructor initializes the profile instance with the specified fields.
 
 ### 2-2- profileExists Method
 
-public static boolean profileExists()  
+     public static boolean profileExists()  
 This method checks if the profile file ('profile.txt') exists and if it contains data. Returns true if a profile exists; otherwise, returns false.
 
 ### 2-3- getProfileFromFile Method
